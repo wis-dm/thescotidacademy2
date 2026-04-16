@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about Scootid Academy — our story, mission, vision, values, and why parents trust us with their children's future." />
+  <title>About Us | Scootid Academy</title>
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/nav.css" />
+  <link rel="stylesheet" href="../css/sections.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <style>
+    /* PAGE HERO */
+    .page-hero {
+      background:
+        linear-gradient(to bottom, rgba(11,29,58,0.7) 0%, rgba(11,29,58,0.88) 100%),
+        url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1400&q=80') center/cover no-repeat;
+      padding: 160px 0 90px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
+    }
+    .page-hero-content { position: relative; z-index: 2; }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      justify-content: center; font-size: 13px;
+      color: rgba(255,255,255,0.55); margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--gold-light); transition: var(--transition-fast); }
+    .breadcrumb a:hover { color: var(--white); }
+
+    /* MISSION / VISION / VALUES CARDS */
+    .mvv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+    .mvv-card {
+      background: var(--white);
+      border-radius: var(--r-lg);
+      padding: 40px 32px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .mvv-card::before {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      transform: scaleX(0);
+      transition: var(--transition);
+    }
+    .mvv-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+    .mvv-card:hover::before { transform: scaleX(1); }
+    .mvv-icon { font-size: 44px; margin-bottom: 16px; }
+    .mvv-title {
+      font-family: var(--font-display);
+      font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 12px;
+    }
+    .mvv-heading {
+      font-family: var(--font-heading);
+      font-size: 22px; font-weight: 700; color: var(--navy);
+      margin-bottom: 14px;
+    }
+    .mvv-text { font-size: 15px; color: var(--gray-600); line-height: 1.7; }
+
+    /* STORY SECTION */
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .story-img-wrap { position: relative; }
+    .story-img-main {
+      width: 100%; height: 480px;
+      object-fit: cover;
+      border-radius: var(--r-xl);
+      box-shadow: var(--shadow-xl);
+    }
+    .story-img-secondary {
+      position: absolute;
+      bottom: -28px; right: -24px;
+      width: 200px; height: 230px;
+      object-fit: cover;
+      border-radius: var(--r-lg);
+      border: 6px solid var(--white);
+      box-shadow: var(--shadow-lg);
+    }
+    .story-founded-badge {
+      position: absolute;
+      top: 32px; left: -20px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: var(--r-md);
+      padding: 18px 22px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      z-index: 2;
+    }
+    .story-founded-year {
+      font-family: var(--font-heading);
+      font-size: 38px; font-weight: 900;
+      color: var(--gold-light); line-height: 1;
+    }
+    .story-founded-label {
+      font-size: 10px; letter-spacing: 0.2em;
+      text-transform: uppercase; color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+    }
+
+    /* CORE VALUES */
+    .values-dark {
+      background: var(--navy);
+      border-radius: var(--r-xl);
+      padding: 64px 60px;
+      margin-top: 80px;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 40px;
+    }
+    .value-card-full {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--r-lg);
+      padding: 28px 24px;
+      transition: var(--transition);
+    }
+    .value-card-full:hover {
+      background: rgba(200,168,75,0.1);
+      border-color: rgba(200,168,75,0.3);
+      transform: translateY(-4px);
+    }
+    .value-card-num {
+      font-family: var(--font-display);
+      font-size: 11px; letter-spacing: 0.2em;
+      color: var(--gold); margin-bottom: 10px;
+    }
+    .value-card-title {
+      font-family: var(--font-heading);
+      font-size: 20px; font-weight: 700;
+      color: var(--white); margin-bottom: 10px;
+    }
+    .value-card-desc { font-size: 14px; color: rgba(255,255,255,0.62); line-height: 1.65; }
+
+    /* WHY US */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .why-item {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 24px 22px;
+      background: var(--white);
+      border-radius: var(--r-md);
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .why-item:hover {
+      border-color: var(--gold);
+      box-shadow: var(--shadow-md);
+      transform: translateX(4px);
+    }
+    .why-icon {
+      width: 48px; height: 48px; flex-shrink: 0;
+      border-radius: var(--r-md);
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      box-shadow: var(--shadow-gold);
+    }
+    .why-title { font-family: var(--font-heading); font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .why-desc { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+
+    /* STATS BAND */
+    .stats-band {
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      border-radius: var(--r-xl);
+      padding: 52px 60px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+      margin-top: 80px;
+    }
+    .band-stat-num {
+      font-family: var(--font-heading);
+      font-size: 44px; font-weight: 900;
+      color: var(--gold-light); letter-spacing: -0.03em;
+      line-height: 1; margin-bottom: 8px;
+    }
+    .band-stat-label { font-size: 13px; color: rgba(255,255,255,0.65); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }
+
+    @media (max-width: 1024px) {
+      .mvv-grid { grid-template-columns: repeat(2, 1fr); }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-band { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .mvv-grid { grid-template-columns: 1fr; }
+      .story-grid { grid-template-columns: 1fr; }
+      .story-img-wrap { display: none; }
+      .values-dark { padding: 40px 24px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .stats-band { grid-template-columns: 1fr 1fr; padding: 36px 24px; }
+    }
+    @media (max-width: 480px) {
+      .stats-band { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="../index.html" class="nav-logo" aria-label="Scootid Academy Home">
+          <div class="nav-logo-crest" aria-hidden="true">🎓</div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">Scootid Academy</span>
+            <span class="nav-logo-tagline">Est. 2005 · Rivers State</span>
+          </div>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="about.html"     class="nav-link active">About</a></li>
+          <li><a href="academics.html" class="nav-link">Academics</a></li>
+          <li><a href="news.html"      class="nav-link">News &amp; Events</a></li>
+          <li><a href="gallery.html"   class="nav-link">Gallery</a></li>
+          <li><a href="contact.html"   class="nav-link">Contact</a></li>
+          <li><a href="careers.html"   class="nav-link">Careers</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-primary">Apply Now</a>
+          <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-close">✕</button>
+    <a href="about.html"     class="mobile-nav-link">About</a>
+    <a href="academics.html" class="mobile-nav-link">Academics</a>
+    <a href="news.html"      class="mobile-nav-link">News &amp; Events</a>
+    <a href="gallery.html"   class="mobile-nav-link">Gallery</a>
+    <a href="contact.html"   class="mobile-nav-link">Contact</a>
+    <a href="careers.html"   class="mobile-nav-link">Careers</a>
+    <div class="mobile-menu-bottom">
+      <a href="contact.html" class="btn btn-primary">Apply Now</a>
+    </div>
+  </div>
+
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" role="banner">
+    <div class="container page-hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">About Us</span>
+      </nav>
+      <div class="section-tag light">Our Story</div>
+      <h1 class="heading-xl text-white" style="margin-bottom:16px;">About Scootid Academy</h1>
+      <div class="gold-divider center"></div>
+      <p class="body-lg" style="color:rgba(255,255,255,0.75); max-width:560px; margin:0 auto;">
+        Two decades of academic excellence, moral leadership, and transformational education in the heart of Rivers State.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- MISSION / VISION / VALUES CARDS -->
+  <section class="section" aria-labelledby="mvv-title">
+    <div class="container">
+      <div style="text-align:center;" class="reveal">
+        <div class="section-tag">Who We Are</div>
+        <h2 class="heading-lg text-navy" id="mvv-title">Our Mission, Vision & Values</h2>
+        <div class="gold-divider center"></div>
+      </div>
+
+      <div class="mvv-grid">
+        <div class="mvv-card reveal delay-1">
+          <div class="mvv-icon">🎯</div>
+          <div class="mvv-title">Mission</div>
+          <div class="mvv-heading">Our Purpose</div>
+          <p class="mvv-text">To provide a world-class, holistic education that equips every student with academic excellence, strong moral character, and the skills to succeed in a rapidly changing world.</p>
+        </div>
+        <div class="mvv-card reveal delay-2">
+          <div class="mvv-icon">🔭</div>
+          <div class="mvv-title">Vision</div>
+          <div class="mvv-heading">Our Dream</div>
+          <p class="mvv-text">To become Nigeria's most trusted and distinguished centre of learning — producing leaders who will shape the nation and the African continent for generations to come.</p>
+        </div>
+        <div class="mvv-card reveal delay-3">
+          <div class="mvv-icon">⚖️</div>
+          <div class="mvv-title">Values</div>
+          <div class="mvv-heading">What We Stand For</div>
+          <p class="mvv-text">Excellence. Integrity. Innovation. Compassion. Discipline. Every decision we make, every programme we build, is guided by these five uncompromising principles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- OUR STORY -->
+  <section class="section" style="background:var(--white);" aria-labelledby="story-title">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-img-wrap reveal-left">
+          <img class="story-img-main"
+            src="https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80"
+            alt="Scootid Academy campus and students" loading="lazy" />
+          <img class="story-img-secondary"
+            src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=400&q=80"
+            alt="School award ceremony" loading="lazy" />
+          <div class="story-founded-badge">
+            <div class="story-founded-year">2005</div>
+            <div class="story-founded-label">Year Founded</div>
+          </div>
+        </div>
+
+        <div class="reveal-right">
+          <div class="section-tag">Our Story</div>
+          <h2 class="heading-lg text-navy" id="story-title">A Legacy Built on Excellence</h2>
+          <div class="gold-divider"></div>
+
+          <p class="body-lg text-muted" style="margin-bottom:18px;">
+            Scootid Academy was founded in 2005 by a group of passionate educators who shared a bold vision: to build a school in Rivers State that would rival the very best in Nigeria and beyond.
+          </p>
+          <p class="body-md text-muted" style="margin-bottom:18px;">
+            Starting with just 60 pupils in a modest building on Captain Allison Close, Eneka, the academy has grown into a thriving community of over 1,200 students, 80+ qualified staff, and a campus equipped with modern laboratories, libraries, and digital learning centres.
+          </p>
+          <p class="body-md text-muted" style="margin-bottom:28px;">
+            Over the past two decades, Scootid Academy has consistently produced top-performing students in WAEC, NECO, and JAMB examinations, with alumni now working as doctors, engineers, lawyers, and entrepreneurs across Nigeria and the world.
+          </p>
+
+          <div style="display:flex; gap:24px; flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn-primary">Apply for Admission</a>
+            <a href="academics.html" class="btn btn-outline-navy">Explore Programmes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CORE VALUES DETAIL -->
+  <section class="section" aria-labelledby="values-title">
+    <div class="container">
+      <div class="values-dark reveal">
+        <div style="text-align:center;">
+          <div class="section-tag light">Foundation</div>
+          <h2 class="heading-lg text-white" id="values-title">Our Core Values</h2>
+          <div class="gold-divider center"></div>
+          <p style="color:rgba(255,255,255,0.65); max-width:520px; margin:0 auto; font-size:15px;">
+            These values are not merely words on a wall. They are the living principles that guide every interaction, every lesson, and every decision at Scootid Academy.
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card-full">
+            <div class="value-card-num">01 · Value</div>
+            <div class="value-card-title">🏅 Academic Excellence</div>
+            <p class="value-card-desc">We hold every student to the highest academic standards — challenging them to achieve their very best through rigorous curriculum, dedicated teaching, and continuous assessment.</p>
+          </div>
+          <div class="value-card-full">
+            <div class="value-card-num">02 · Value</div>
+            <div class="value-card-title">🛡️ Integrity &amp; Honour</div>
+            <p class="value-card-desc">We cultivate honesty, trustworthiness, and moral courage. Students learn that true character is defined by what they do when no one is watching.</p>
+          </div>
+          <div class="value-card-full">
+            <div class="value-card-num">03 · Value</div>
+            <div class="value-card-title">💡 Innovation</div>
+            <p class="value-card-desc">We embrace technology, creativity, and new ways of thinking. Our ICT labs, coding clubs, and science olympiads ensure students are prepared for tomorrow's world.</p>
+          </div>
+          <div class="value-card-full">
+            <div class="value-card-num">04 · Value</div>
+            <div class="value-card-title">💛 Compassion</div>
+            <p class="value-card-desc">We nurture empathy, kindness, and community spirit. Our students are taught to serve their communities and to see themselves as contributors to a better society.</p>
+          </div>
+          <div class="value-card-full">
+            <div class="value-card-num">05 · Value</div>
+            <div class="value-card-title">📐 Discipline</div>
+            <p class="value-card-desc">Self-discipline is the bedrock of success. Through structured routines, clear expectations, and mentorship, we help students develop the habits of high achievers.</p>
+          </div>
+          <div class="value-card-full">
+            <div class="value-card-num">06 · Value</div>
+            <div class="value-card-title">🌍 Global Citizenship</div>
+            <p class="value-card-desc">We raise students who are aware of the world beyond their community — grounded in Nigerian identity, yet ready to compete and contribute on the world stage.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- WHY PARENTS TRUST US -->
+  <section class="section" style="background:var(--cream);" aria-labelledby="why-title">
+    <div class="container">
+      <div style="text-align:center;" class="reveal">
+        <div class="section-tag">Why Choose Us</div>
+        <h2 class="heading-lg text-navy" id="why-title">Why Parents Trust Scootid Academy</h2>
+        <div class="gold-divider center"></div>
+        <p class="body-md text-muted" style="max-width:520px; margin:0 auto;">
+          Thousands of families across Rivers State and beyond choose Scootid Academy year after year. Here's why.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-item reveal delay-1">
+          <div class="why-icon">🏆</div>
+          <div>
+            <div class="why-title">Consistently Outstanding Results</div>
+            <p class="why-desc">98% WAEC/NECO pass rate annually. Multiple state and national examination records broken by our students year after year.</p>
+          </div>
+        </div>
+        <div class="why-item reveal delay-2">
+          <div class="why-icon">👨‍🏫</div>
+          <div>
+            <div class="why-title">Expert, Dedicated Faculty</div>
+            <p class="why-desc">80+ qualified, experienced teachers — many with postgraduate degrees. Regular training keeps our staff at the cutting edge of education.</p>
+          </div>
+        </div>
+        <div class="why-item reveal delay-3">
+          <div class="why-icon">🔒</div>
+          <div>
+            <div class="why-title">Safe &amp; Secure Environment</div>
+            <p class="why-desc">24/7 security, fenced perimeter, CCTV cameras, and a strict safeguarding policy ensure every child is protected at all times.</p>
+          </div>
+        </div>
+        <div class="why-item reveal delay-4">
+          <div class="why-icon">🏗️</div>
+          <div>
+            <div class="why-title">World-Class Facilities</div>
+            <p class="why-desc">Modern science labs, computer lab with broadband internet, school library, sports field, and well-equipped classrooms provide the ideal learning environment.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon">💬</div>
+          <div>
+            <div class="why-title">Open Communication with Parents</div>
+            <p class="why-desc">Regular PTA meetings, termly reports, WhatsApp parent groups, and an open-door policy ensure parents are always informed and involved.</p>
+          </div>
+        </div>
+        <div class="why-item reveal delay-1">
+          <div class="why-icon">🌱</div>
+          <div>
+            <div class="why-title">Whole-Child Development</div>
+            <p class="why-desc">Beyond academics, we invest in sports, arts, debate, music, leadership, and community service — producing well-rounded, confident young adults.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- STATS BAND -->
+  <section class="section" aria-label="Achievement statistics">
+    <div class="container">
+      <div class="stats-band reveal">
+        <div>
+          <div class="band-stat-num" data-count="1200" data-suffix="+">0+</div>
+          <div class="band-stat-label">Students Enrolled</div>
+        </div>
+        <div>
+          <div class="band-stat-num" data-count="98" data-suffix="%">0%</div>
+          <div class="band-stat-label">WAEC Pass Rate</div>
+        </div>
+        <div>
+          <div class="band-stat-num" data-count="45" data-suffix="+">0+</div>
+          <div class="band-stat-label">Awards &amp; Trophies</div>
+        </div>
+        <div>
+          <div class="band-stat-num" data-count="20" data-suffix=" Yrs">0 Yrs</div>
+          <div class="band-stat-label">Of Excellence</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA BANNER -->
+  <section class="section" style="background:var(--white);" aria-label="Admissions call to action">
+    <div class="container">
+      <div style="text-align:center; max-width:600px; margin:0 auto;" class="reveal">
+        <div class="section-tag">Ready to Join?</div>
+        <h2 class="heading-md text-navy" style="margin-bottom:16px;">Give Your Child the Best Start in Life</h2>
+        <p class="body-md text-muted" style="margin-bottom:32px;">
+          Admissions for the 2025/2026 academic session are now open. Spaces are limited — apply today.
+        </p>
+        <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-primary">Apply for Admission</a>
+          <a href="academics.html" class="btn btn-outline-navy">View Programmes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer style="background:var(--navy); padding:32px 0; border-top:3px solid var(--gold);">
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="width:38px;height:38px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;">🎓</div>
+        <div>
+          <div style="font-family:var(--font-display);font-size:12px;letter-spacing:0.12em;color:var(--white);text-transform:uppercase;">Scootid Academy</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.45);">Est. 2005 · Rivers State, Nigeria</div>
+        </div>
+      </div>
+      <div style="display:flex; gap:20px; flex-wrap:wrap;">
+        <a href="../index.html"  style="font-size:13px;color:rgba(255,255,255,0.55);" class="footer-bottom-link">Home</a>
+        <a href="about.html"     style="font-size:13px;color:var(--gold-light);" class="footer-bottom-link">About</a>
+        <a href="academics.html" style="font-size:13px;color:rgba(255,255,255,0.55);" class="footer-bottom-link">Academics</a>
+        <a href="news.html"      style="font-size:13px;color:rgba(255,255,255,0.55);" class="footer-bottom-link">News</a>
+        <a href="gallery.html"   style="font-size:13px;color:rgba(255,255,255,0.55);" class="footer-bottom-link">Gallery</a>
+        <a href="contact.html"   style="font-size:13px;color:rgba(255,255,255,0.55);" class="footer-bottom-link">Contact</a>
+        <a href="careers.html"   style="font-size:13px;color:rgba(255,255,255,0.55);" class="footer-bottom-link">Careers</a>
+      </div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);">&copy; 2025 Scootid Academy. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Scootid Academy – A prestigious institution in Rivers State dedicated to raising future leaders through academic excellence, character, and innovation." />
+  <title>Scootid Academy | READ(LITRE) LEAD(PLOMP) SUCEED(REUSSIR)</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/components.css" />
+
+  <!-- Favicon placeholder -->
+  <!-- <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>" /> -->
+</head>
+
+<body>
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  NAVIGATION                              ║
+       ╚══════════════════════════════════════════╝ -->
+  <nav id="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="container">
+      <div class="nav-inner">
+
+        <!-- Logo -->
+        <a href="#" class="nav-logo" aria-label="Scootid Academy Home">
+          <div class="nav-logo-crest" aria-hidden="true">🎓</div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">Scootid Academy</span>
+            <span class="nav-logo-tagline">Est. 2005 · Rivers State</span>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <ul class="nav-links" role="list">
+          <li class="nav-dropdown">
+            <a href="#about" class="nav-link" data-section="about">About ▾</a>
+            <div class="nav-dropdown-menu">
+              <a class="nav-dropdown-item" href="#about">About (This Page)</a>
+              <a class="nav-dropdown-item" href="pages/about.html">Full About Page →</a>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <a href="#academics" class="nav-link" data-section="academics">Academics ▾</a>
+            <div class="nav-dropdown-menu">
+              <a class="nav-dropdown-item" href="#academics">Academics (This Page)</a>
+              <a class="nav-dropdown-item" href="pages/academics.html">Full Academics Page →</a>
+              <a class="nav-dropdown-item" href="pages/academics.html#nursery">Nursery &amp; Crèche</a>
+              <a class="nav-dropdown-item" href="pages/academics.html#primary">Primary School</a>
+              <a class="nav-dropdown-item" href="pages/academics.html#secondary">Secondary School</a>
+              <a class="nav-dropdown-item" href="pages/academics.html#ict">ICT &amp; Digital Learning</a>
+              <a class="nav-dropdown-item" href="pages/academics.html#leadership">Leadership Programme</a>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <a href="#news" class="nav-link" data-section="news">News ▾</a>
+            <div class="nav-dropdown-menu">
+              <a class="nav-dropdown-item" href="#news">News (This Page)</a>
+              <a class="nav-dropdown-item" href="pages/news.html">Full News Page →</a>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <a href="#gallery" class="nav-link" data-section="gallery">Gallery ▾</a>
+            <div class="nav-dropdown-menu">
+              <a class="nav-dropdown-item" href="#gallery">Gallery (This Page)</a>
+              <a class="nav-dropdown-item" href="pages/gallery.html">Full Gallery Page →</a>
+            </div>
+          </li>
+          <li><a href="#location" class="nav-link" data-section="location">Location</a></li>
+          <li class="nav-dropdown">
+            <a href="#contact" class="nav-link" data-section="contact">Contact ▾</a>
+            <div class="nav-dropdown-menu">
+              <a class="nav-dropdown-item" href="#contact">Contact (This Page)</a>
+              <a class="nav-dropdown-item" href="pages/contact.html">Full Contact Page →</a>
+            </div>
+          </li>
+          <li><a href="pages/careers.html" class="nav-link">Careers</a></li>
+        </ul>
+
+        <!-- CTA + Hamburger -->
+        <div class="nav-actions">
+          <a href="pages/contact.html" class="btn btn-primary" aria-label="Apply for Admission">Apply Now</a>
+          <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-menu-close" id="mobile-close" aria-label="Close menu">✕</button>
+    <a href="#about"            class="mobile-nav-link">About</a>
+    <a href="pages/about.html"  class="mobile-nav-link" style="font-size:14px;opacity:.7;">↳ About Page</a>
+    <a href="#academics"        class="mobile-nav-link">Academics</a>
+    <a href="pages/academics.html" class="mobile-nav-link" style="font-size:14px;opacity:.7;">↳ Academics Page</a>
+    <a href="#news"             class="mobile-nav-link">News &amp; Events</a>
+    <a href="pages/news.html"   class="mobile-nav-link" style="font-size:14px;opacity:.7;">↳ News Page</a>
+    <a href="#gallery"          class="mobile-nav-link">Gallery</a>
+    <a href="pages/gallery.html" class="mobile-nav-link" style="font-size:14px;opacity:.7;">↳ Gallery Page</a>
+    <a href="#contact"          class="mobile-nav-link">Contact</a>
+    <a href="pages/contact.html" class="mobile-nav-link" style="font-size:14px;opacity:.7;">↳ Contact Page</a>
+    <a href="pages/careers.html" class="mobile-nav-link">Careers</a>
+    <div class="mobile-menu-bottom">
+      <a href="pages/contact.html" class="btn btn-primary">Apply Now</a>
+    </div>
+  </div>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  FLOATING NEWS BAR                       ║
+       ╚══════════════════════════════════════════╝ -->
+  <div id="news-bar" role="marquee" aria-label="School Announcements">
+    <span class="news-bar-badge">📢 Notice</span>
+    <div class="news-bar-divider"></div>
+
+    <div class="news-bar-ticker">
+      <div class="news-bar-track" id="news-track">
+        <span class="news-bar-item">Admissions for 2025/2026 Academic Session are now OPEN — Apply today!</span>
+        <span class="news-bar-item">Mid-Term Examinations begin Monday, 21st April 2025</span>
+        <span class="news-bar-item">Parents-Teachers Association (PTA) meeting: Saturday 26th April at 9:00 AM</span>
+        <span class="news-bar-item">Inter-House Sports Day — 10th May 2025. All parents are invited!</span>
+        <span class="news-bar-item">School resumes from Easter break on Monday, 28th April 2025</span>
+        <span class="news-bar-item">Congratulations to our SS3 students — 98% WAEC distinction rate!</span>
+        <!-- Duplicate for seamless loop -->
+        <span class="news-bar-item">Admissions for 2025/2026 Academic Session are now OPEN — Apply today!</span>
+        <span class="news-bar-item">Mid-Term Examinations begin Monday, 21st April 2025</span>
+        <span class="news-bar-item">Parents-Teachers Association (PTA) meeting: Saturday 26th April at 9:00 AM</span>
+        <span class="news-bar-item">Inter-House Sports Day — 10th May 2025. All parents are invited!</span>
+        <span class="news-bar-item">School resumes from Easter break on Monday, 28th April 2025</span>
+        <span class="news-bar-item">Congratulations to our SS3 students — 98% WAEC distinction rate!</span>
+      </div>
+    </div>
+
+    <button class="news-bar-close" id="news-bar-close" aria-label="Dismiss notice">✕</button>
+  </div>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  HERO                                    ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-accent-bar"></div>
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero-content">
+
+        <!-- Eyebrow 
+        <div class="hero-eyebrow">
+          <div class="hero-eyebrow-pill">
+            <span class="hero-eyebrow-dot"></span>
+            Rivers State · Nigeria
+          </div>
+        </div> -->
+
+        <!-- Headline -->
+        <h1 class="hero-title">
+          Raising <em>Future Leaders</em><br>Through Excellence
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="hero-subtitle">
+          A world-class learning environment where academic distinction, moral integrity, and innovative thinking shape extraordinary young minds into tomorrow's leaders.
+        </p>
+
+        <!-- CTAs -->
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary" aria-label="Start application">
+            <span>📋</span> Apply Now
+          </a>
+          <a href="#location" class="btn btn-outline-white" aria-label="Visit our campus">
+            <span>🏫</span> Visit Campus
+          </a>
+          <a href="#contact" class="btn btn-outline-white" aria-label="Contact admissions">
+            <span>💬</span> Contact Us
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero-stats" role="list" aria-label="School statistics">
+          <div class="stat-card" role="listitem">
+            <div class="stat-number" data-count="200" data-suffix="+">0+</div>
+            <div class="stat-label">Students</div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-number" data-count="100" data-suffix="%">0%</div>
+            <div class="stat-label">Graduation Rate</div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-number" data-count="888" data-suffix="+">0+</div>
+            <div class="stat-label">Awards Won</div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-number" data-count="20" data-suffix="yrs">0yrs</div>
+            <div class="stat-label">Excellence</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <a href="#about" class="hero-scroll" aria-label="Scroll down">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Explore</span>
+    </a>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  ABOUT                                   ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="about" class="section" aria-labelledby="about-title">
+    <div class="container">
+
+      <div class="about-grid">
+        <!-- Image Side -->
+        <div class="about-images reveal-left">
+          <img
+            class="about-img-main"
+            src="https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80"
+            alt="Students in Scootid Academy classroom"
+            loading="lazy"
+          />
+          <img
+            class="about-img-accent"
+            src="https://images.unsplash.com/photo-1604881991720-f91add269bed?w=400&q=80"
+            alt="Award ceremony"
+            loading="lazy"
+          />
+          <div class="about-badge">
+            <div class="about-badge-year">Founded</div>
+            <div class="about-badge-text">2005</div>
+            <div class="about-badge-sub">Years of Excellence</div>
+          </div>
+        </div>
+
+        <!-- Text Side -->
+        <div class="about-content reveal-right">
+          <div class="section-tag">About the School</div>
+          <h2 class="heading-lg text-navy" id="about-title">
+            A Legacy of Academic Excellence & Character
+          </h2>
+          <div class="gold-divider"></div>
+          <p class="body-lg text-muted" style="margin-bottom:16px;">
+            Scootid Academy was founded with a singular vision: to create a nurturing centre of academic brilliance in the heart of Rivers State. For over two decades, we have consistently produced graduates who excel in universities across Nigeria and beyond.
+          </p>
+          <p class="body-md text-muted">
+            Our approach blends rigorous academics with deep moral formation, equipping every child not only with knowledge, but with the wisdom, discipline, and leadership skills to make a meaningful impact in the world.
+          </p>
+
+          <!-- Values -->
+          <div class="about-values" role="list" aria-label="Core values">
+            <div class="value-chip reveal delay-1" role="listitem">
+              <div class="value-icon">🏅</div>
+              <span class="value-text">Academic Excellence</span>
+            </div>
+            <div class="value-chip reveal delay-2" role="listitem">
+              <div class="value-icon">🤝</div>
+              <span class="value-text">Integrity & Honour</span>
+            </div>
+            <div class="value-chip reveal delay-3" role="listitem">
+              <div class="value-icon">💡</div>
+              <span class="value-text">Innovation & ICT</span>
+            </div>
+            <div class="value-chip reveal delay-4" role="listitem">
+              <div class="value-icon">🌍</div>
+              <span class="value-text">Global Citizenship</span>
+            </div>
+            <div class="value-chip reveal delay-5" role="listitem">
+              <div class="value-icon">🛡️</div>
+              <span class="value-text">Moral Leadership</span>
+            </div>
+            <div class="value-chip reveal delay-1" role="listitem">
+              <div class="value-icon">⚽</div>
+              <span class="value-text">Sports & Culture</span>
+            </div>
+          </div>
+
+          <!-- Achievements -->
+          <div class="about-achievements" role="list" aria-label="Key achievements">
+            <div class="achievement-item" role="listitem">
+              <div class="achievement-num"><span data-count="98" data-suffix="%">0%</span></div>
+              <div class="achievement-label">WAEC Pass Rate</div>
+            </div>
+            <div class="achievement-item" role="listitem">
+              <div class="achievement-num"><span data-count="888" data-suffix="+">0+</span></div>
+              <div class="achievement-label">State Awards</div>
+            </div>
+            <div class="achievement-item" role="listitem">
+              <div class="achievement-num"><span data-count="80" data-suffix="+">0+</span></div>
+              <div class="achievement-label">Qualified Staff</div>
+            </div>
+            <div class="achievement-item" role="listitem">
+              <div class="achievement-num"><span data-count="10" data-suffix="">0</span></div>
+              <div class="achievement-label">Modern Labs</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  ACADEMICS                               ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="academics" class="section-lg" aria-labelledby="academics-title">
+    <div class="container">
+
+      <div class="academics-header reveal">
+        <div class="section-tag light">Academics</div>
+        <h2 class="heading-lg text-white" id="academics-title">
+          World-Class Education at Every Stage
+        </h2>
+        <div class="gold-divider center"></div>
+        <p class="body-lg" style="color:rgba(255,255,255,0.65); max-width:560px; margin:0 auto;">
+          From crèche to secondary school, every programme is designed to develop sharp minds, strong character, and a lifelong passion for learning.
+        </p>
+      </div>
+
+      <div class="academic-grid">
+
+        <!-- Nursery -->
+        <article class="academic-card reveal delay-1" aria-label="Nursery and Crèche programme">
+          <div class="academic-card-img">
+            <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600&q=80" alt="Young children in nursery class" loading="lazy" />
+            <div class="academic-card-level">Ages 1–5</div>
+          </div>
+          <div class="academic-card-body">
+            <div class="academic-icon">🌱</div>
+            <h3 class="academic-title">Nursery &amp; Crèche</h3>
+            <p class="academic-desc">
+              A warm, play-based environment that nurtures curiosity, language skills, and social confidence in our youngest learners through structured discovery.
+            </p>
+            <a href="pages/academics.html" class="academic-link" aria-label="Learn more about Nursery programme">Learn More →</a>
+          </div>
+        </article>
+
+        <!-- Primary -->
+        <article class="academic-card reveal delay-2" aria-label="Primary school programme">
+          <div class="academic-card-img">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" alt="Primary school children learning" loading="lazy" />
+            <div class="academic-card-level">Ages 6–12</div>
+          </div>
+          <div class="academic-card-body">
+            <div class="academic-icon">📚</div>
+            <h3 class="academic-title">Primary School</h3>
+            <p class="academic-desc">
+              A rigorous yet joyful curriculum building literacy, numeracy, science, and critical thinking skills. National curriculum aligned with British education standards.
+            </p>
+            <a href="pages/academics.html" class="academic-link" aria-label="Learn more about Primary programme">Learn More →</a>
+          </div>
+        </article>
+
+        <!-- Secondary -->
+        <article class="academic-card reveal delay-3" aria-label="Secondary school programme">
+          <div class="academic-card-img">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80" alt="Secondary school students studying" loading="lazy" />
+            <div class="academic-card-level">Ages 12–18</div>
+          </div>
+          <div class="academic-card-body">
+            <div class="academic-icon">🎓</div>
+            <h3 class="academic-title">Secondary School</h3>
+            <p class="academic-desc">
+              Comprehensive WAEC &amp; NECO preparation with exceptional results. Science, Arts, and Commercial pathways with expert faculty in every subject.
+            </p>
+            <a href="pages/academics.html" class="academic-link" aria-label="Learn more about Secondary programme">Learn More →</a>
+          </div>
+        </article>
+
+        <!-- ICT -->
+        <!--<article class="academic-card reveal delay-1" aria-label="ICT and Digital Learning programme">
+          <div class="academic-card-img">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80" alt="Students in computer lab" loading="lazy" />
+            <div class="academic-card-level">All Levels</div>
+          </div>
+          <div class="academic-card-body">
+            <div class="academic-icon">💻</div>
+            <h3 class="academic-title">ICT &amp; Digital Learning</h3>
+            <p class="academic-desc">
+              A fully equipped computer lab with broadband internet, coding classes, digital literacy programmes, and robotics clubs preparing students for the 21st century.
+            </p>
+            <a href="pages/academics.html" class="academic-link" aria-label="Learn more about ICT programme">Learn More →</a>
+          </div> -->
+        </article>
+
+        <!-- Coaching -->
+        <!-- <article class="academic-card reveal delay-2" aria-label="Special coaching and tutorials">
+          <div class="academic-card-img">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80" alt="Teacher coaching students" loading="lazy" />
+            <div class="academic-card-level">SS1–SS3</div>
+          </div>
+          <div class="academic-card-body">
+            <div class="academic-icon">🧑‍🏫</div>
+            <h3 class="academic-title">Special Coaching</h3>
+            <p class="academic-desc">
+              Dedicated exam preparation for WAEC, NECO, JAMB, and Common Entrance. Small group tutorials with our highest-performing faculty members.
+            </p>
+            <a href="pages/academics.html" class="academic-link" aria-label="Learn more about Special Coaching">Learn More →</a>
+          </div>
+        </article> -->
+
+        <!-- Leadership -->
+       <!-- <article class="academic-card reveal delay-3" aria-label="Moral and leadership training">
+          <div class="academic-card-img">
+            <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&q=80" alt="Students in leadership assembly" loading="lazy" />
+            <div class="academic-card-level">All Levels</div>
+          </div>
+          <div class="academic-card-body">
+            <div class="academic-icon">🌟</div>
+            <h3 class="academic-title">Moral &amp; Leadership</h3>
+            <p class="academic-desc">
+              Character education, civic responsibility, debating, public speaking, and community service programmes that build confident, ethical leaders.
+            </p>
+            <a href="pages/academics.html" class="academic-link" aria-label="Learn more about Leadership training">Learn More →</a>
+          </div> -->
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  NEWS & EVENTS                           ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="news" class="section" aria-labelledby="news-title">
+    <div class="container">
+
+      <div class="news-header">
+        <div>
+          <div class="section-tag">News &amp; Events</div>
+          <h2 class="heading-lg text-navy" id="news-title">Latest from the Academy</h2>
+          <div class="gold-divider"></div>
+        </div>
+        <a href="pages/news.html" class="btn btn-ghost-gold" aria-label="View all news">View All →</a>
+      </div>
+
+      <div class="news-grid">
+
+        <!-- Featured Article -->
+        <article class="news-card news-card-featured reveal-left" aria-label="Featured news article">
+          <div class="news-card-img">
+            <!-- ADMIN IMAGE UPLOAD ZONE -->
+            <label class="news-upload-zone" for="upload-featured" title="Click to upload featured image" style="height:320px; display:flex; flex-direction:column; align-items:center; justify-content:center; cursor:pointer; position:relative; overflow:hidden;">
+              <div class="news-upload-content" style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+                <div class="news-upload-icon">🖼️</div>
+                <div class="news-upload-text">Upload Featured Image</div>
+                <div class="news-upload-sub">JPG, PNG, WebP · Max 5MB</div>
+              </div>
+              <input type="file" id="upload-featured" class="news-upload-input" accept="image/*" style="display:none;" aria-label="Upload featured news image" />
+            </label>
+            <div class="news-card-cat">🏆 Achievement</div>
+          </div>
+          <div class="news-card-body">
+            <div class="news-card-meta">
+              <span class="news-date">📅 April 5, 2025</span>
+            </div>
+            <h3 class="news-card-title">Scootid Academy Wins State Science Olympiad for Third Consecutive Year</h3>
+            <p class="news-card-excerpt">Our Senior Science Club team brought home first place at the 2025 Rivers State Science Olympiad, defeating 47 other schools with outstanding experiments in chemistry and physics.</p>
+            <a href="pages/news.html" class="news-read-more" aria-label="Read full story about Science Olympiad">Read Full Story →</a>
+          </div>
+        </article>
+
+        <!-- News Card 2 -->
+        <article class="news-card reveal delay-1" aria-label="News article">
+          <div class="news-card-img">
+            <label class="news-upload-zone" for="upload-news2" style="height:180px; display:flex; flex-direction:column; align-items:center; justify-content:center; cursor:pointer; position:relative; overflow:hidden;">
+              <div class="news-upload-content" style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+                <div style="font-size:24px;">📸</div>
+                <div class="news-upload-text">Upload Event Photo</div>
+                <div class="news-upload-sub">Event / Competition / Activity</div>
+              </div>
+              <input type="file" id="upload-news2" class="news-upload-input" accept="image/*" style="display:none;" aria-label="Upload event photo" />
+            </label>
+            <div class="news-card-cat">🎉 Event</div>
+          </div>
+          <div class="news-card-body">
+            <div class="news-card-meta">
+              <span class="news-date">📅 March 20, 2025</span>
+            </div>
+            <h3 class="news-card-title">Annual Cultural Day Celebrates Nigeria's Rich Heritage</h3>
+            <p class="news-card-excerpt">Students showcased traditional dances, attire, and cuisine from all 36 states at our vibrant Cultural Day celebration.</p>
+            <a href="pages/news.html" class="news-read-more" aria-label="Read full story about Cultural Day">Read More →</a>
+          </div>
+        </article>
+
+        <!-- News Card 3 -->
+        <article class="news-card reveal delay-2" aria-label="News article">
+          <div class="news-card-img">
+            <label class="news-upload-zone" for="upload-news3" style="height:180px; display:flex; flex-direction:column; align-items:center; justify-content:center; cursor:pointer; position:relative; overflow:hidden;">
+              <div class="news-upload-content" style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+                <div style="font-size:24px;">🎓</div>
+                <div class="news-upload-text">Upload Graduation Photo</div>
+                <div class="news-upload-sub">Graduation / Ceremony / Prize-Giving</div>
+              </div>
+              <input type="file" id="upload-news3" class="news-upload-input" accept="image/*" style="display:none;" aria-label="Upload graduation photo" />
+            </label>
+            <div class="news-card-cat">📖 Academics</div>
+          </div>
+          <div class="news-card-body">
+            <div class="news-card-meta">
+              <span class="news-date">📅 March 1, 2025</span>
+            </div>
+            <h3 class="news-card-title">Class of 2024 Records Highest JAMB Score in School History</h3>
+            <p class="news-card-excerpt">Our graduating class achieved a 97% UTME success rate with 14 students scoring above 300 points in this year's JAMB examination.</p>
+            <a href="pages/news.html" class="news-read-more" aria-label="Read full story about JAMB results">Read More →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  GALLERY                                 ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="gallery" class="section" aria-labelledby="gallery-title">
+    <div class="container">
+
+      <div style="text-align:center; margin-bottom:40px;" class="reveal">
+        <div class="section-tag">Gallery</div>
+        <h2 class="heading-lg text-navy" id="gallery-title">Life at Scootid Academy</h2>
+        <div class="gold-divider center"></div>
+        <p class="body-md text-muted" style="max-width:500px; margin:0 auto;">
+          A glimpse into our vibrant campus life — from laboratories to sports fields, from celebrations to quiet moments of discovery.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="gallery-filters reveal" role="group" aria-label="Filter gallery by category">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="campus">🏫 Campus</button>
+        <button class="filter-btn" data-filter="events">🎉 Events</button>
+        <button class="filter-btn" data-filter="sports">⚽ Sports</button>
+        <button class="filter-btn" data-filter="science">🔬 Science</button>
+        <button class="filter-btn" data-filter="graduation">🎓 Graduation</button>
+        <button class="filter-btn" data-filter="excursion">🚌 Excursion</button>
+      </div>
+
+      <!-- Masonry Gallery -->
+      <div class="gallery-masonry reveal">
+
+        <div class="gallery-item" data-cat="campus" data-caption="Our main school building">
+          <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=500&q=80" alt="Main school building" loading="lazy" />
+          <div class="gallery-overlay"><span class="gallery-overlay-text">Main Building</span></div>
+          <div class="gallery-zoom">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-cat="events" data-caption="Cultural Day celebration">
+          <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=500&q=80" alt="Cultural day event" loading="lazy" />
+          <div class="gallery-overlay"><span class="gallery-overlay-text">Cultural Day</span></div>
+          <div class="gallery-zoom">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-cat="science" data-caption="Science laboratory sessions">
+          <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=500&q=80" alt="Students in science lab" loading="lazy" />
+          <div class="gallery-overlay"><span class="gallery-overlay-text">Science Lab</span></div>
+          <div class="gallery-zoom">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-cat="sports" data-caption="Inter-House Athletics">
+          <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=500&q=80" alt="Sports day athletics" loading="lazy" />
+          <div class="gallery-overlay"><span class="gallery-overlay-text">Athletics Day</span></div>
+          <div class="gallery-zoom">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-cat="graduation" data-caption="2024 Graduation Ceremony">
+          <img src="https://images.unsplash.com/photo-1627556704302-624286467c65?w=500&q=80" alt="Graduation ceremony" loading="lazy" />
+          <div class="gallery-overlay"><span class="gallery-overlay-text">Graduation 2024</span></div>
+          <div class="gallery-zoom">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-cat="campus" data-caption="Modern computer laboratory">
+          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&q=80" alt="Computer lab" loading="lazy" />
+          <div class="gallery-overlay"><span class="gallery-overlay-text">ICT Laboratory</span></div>
+          <div class="gallery-zoom">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-cat="excursion" data-caption="Educational excursion trip">
+          <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=500&q=80" alt="School excursion" loading="lazy" />
+          <div class="gallery-overlay"><span class="gallery-overlay-text">Excursion 2024</span></div>
+          <div class="gallery-zoom">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-cat="events" data-caption="Prize Giving Day ceremony">
+          <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=500&q=80" alt="Prize giving ceremony" loading="lazy" />
+          <div class="gallery-overlay"><span class="gallery-overlay-text">Prize Giving Day</span></div>
+          <div class="gallery-zoom">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-cat="sports" data-caption="Football championship match">
+          <img src="https://images.unsplash.com/photo-1540747913346-19212a4b3ada?w=500&q=80" alt="Football match" loading="lazy" />
+          <div class="gallery-overlay"><span class="gallery-overlay-text">Football Championship</span></div>
+          <div class="gallery-zoom">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-cat="campus" data-caption="Our spacious school library">
+          <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=500&q=80" alt="School library" loading="lazy" />
+          <div class="gallery-overlay"><span class="gallery-overlay-text">School Library</span></div>
+          <div class="gallery-zoom">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-cat="events" data-caption="Annual debate competition">
+          <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=500&q=80" alt="Students debating" loading="lazy" />
+          <div class="gallery-overlay"><span class="gallery-overlay-text">Debate Competition</span></div>
+          <div class="gallery-zoom">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-cat="graduation" data-caption="SS3 Valedictory Service">
+          <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=500&q=80" alt="Valedictory service" loading="lazy" />
+          <div class="gallery-overlay"><span class="gallery-overlay-text">Valedictory Service</span></div>
+          <div class="gallery-zoom">🔍</div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center; margin-top:40px;" class="reveal">
+        <a href="pages/gallery.html" class="btn btn-outline-navy" aria-label="View full gallery">View Full Gallery</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close image preview">✕</button>
+    <img id="lightbox-img" src="" alt="Gallery image preview" />
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  LOCATION / MAP                          ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="location" class="section" aria-labelledby="location-title">
+    <div class="container">
+
+      <div style="text-align:center; margin-bottom:48px;" class="reveal">
+        <div class="section-tag light">Find Us</div>
+        <h2 class="heading-lg text-white" id="location-title">Visit Our Campus</h2>
+        <div class="gold-divider center"></div>
+      </div>
+
+      <div class="location-grid reveal">
+
+        <!-- Info Panel -->
+        <div class="location-info">
+          <div>
+            <div class="section-tag">Location Details</div>
+            <h3 class="heading-md text-navy">Get Directions</h3>
+            <div class="gold-divider"></div>
+          </div>
+
+          <div class="location-detail">
+            <div class="location-detail-icon">📍</div>
+            <div>
+              <div class="location-detail-label">Address</div>
+              <div class="location-detail-value">6 Captain Allison Close<br>Rumuesara, Eneka Road</div>
+              <div class="location-detail-sub">Eneka 500272, Rivers State, Nigeria</div>
+            </div>
+          </div>
+
+          <div class="location-detail">
+            <div class="location-detail-icon">📞</div>
+            <div>
+              <div class="location-detail-label">Phone</div>
+              <div class="location-detail-value">0806 822 2672</div>
+              <div class="location-detail-sub">Mon – Fri · 7:30 AM – 4:00 PM</div>
+            </div>
+          </div>
+
+          <div class="location-detail">
+            <div class="location-detail-icon">🚌</div>
+            <div>
+              <div class="location-detail-label">Nearby Landmarks</div>
+              <div class="location-detail-value">Rumuola Junction, Eneka</div>
+              <div class="location-detail-sub">5 mins from Eneka Expressway</div>
+            </div>
+          </div>
+
+          <div class="location-actions">
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=6+Captain+Allison+Close,+Rumuesara,+Eneka+Road,+Eneka,+Rivers+State,+Nigeria"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              aria-label="Get driving directions to Scootid Academy"
+            >
+              🗺️ Get Directions
+            </a>
+            <a href="tel:+2348068222672" class="btn btn-outline-navy" aria-label="Call the school">
+              📞 Call Us
+            </a>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="location-map" aria-label="Google Maps showing school location">
+          <iframe
+            src="https://www.google.com/maps/place/SCOOTID+ACADEMY,+6+Captain+Allison+Close,+Rumuesara,+Eneka+Rd,+Eneka+500272/@4.9054051,7.0295197,15z/data=!4m6!3m5!1s0x1069d3ec5289747f:0xbe01d3eac393a622!8m2!3d4.9054051!4d7.0295197!16s%2Fg%2F11fphpzj7r?utm_campaign=ml-ardl&g_ep=Eg1tbF8yMDI2MDQxM18wIJvbDyoASAJQAQ%3D%3D"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Scootid Academy location on Google Maps"
+          ></iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  CONTACT                                 ║
+       ╚══════════════════════════════════════════╝ -->
+  <section id="contact" class="section" aria-labelledby="contact-title">
+    <div class="container">
+
+      <div style="text-align:center; margin-bottom:52px;" class="reveal">
+        <div class="section-tag">Get In Touch</div>
+        <h2 class="heading-lg text-navy" id="contact-title">We'd Love to Hear From You</h2>
+        <div class="gold-divider center"></div>
+        <p class="body-md text-muted" style="max-width:500px; margin:0 auto;">
+          Whether you're ready to enrol your child or simply have a question, our admissions team is happy to help.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Left: Channels -->
+        <div class="reveal-left">
+          <div class="section-tag">Contact Channels</div>
+          <h3 class="heading-sm text-navy" style="margin-bottom:6px;">Reach us directly</h3>
+          <p class="body-sm text-muted">Choose the channel most convenient for you.</p>
+
+          <div class="contact-channels">
+            <a href="tel:+2348068222672" class="contact-channel" aria-label="Call us on 0806 822 2672">
+              <div class="channel-icon channel-phone">📞</div>
+              <div>
+                <div class="channel-label">Call Direct</div>
+                <div class="channel-value">0806 822 2672</div>
+              </div>
+            </a>
+
+            <a href="https://wa.me/2348068222672?text=Hello%2C%20I%20am%20interested%20in%20enrolling%20my%20child%20at%20Eneka%20Royal%20Academy."
+               target="_blank" rel="noopener noreferrer"
+               class="contact-channel" aria-label="Chat with us on WhatsApp">
+              <div class="channel-icon channel-whatsapp">💬</div>
+              <div>
+                <div class="channel-label">WhatsApp Chat</div>
+                <div class="channel-value">Quick Message</div>
+              </div>
+            </a>
+
+            <a href="mailto:admissions@scootidacademy.edu.ng" class="contact-channel" aria-label="Email us">
+              <div class="channel-icon channel-email">✉️</div>
+              <div>
+                <div class="channel-label">Email</div>
+                <div class="channel-value">admissions@scootidacademy.edu.ng</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Office Hours -->
+          <div class="office-hours" role="region" aria-label="Office hours">
+            <div class="office-hours-title">🕐 Office Hours</div>
+            <div class="office-hour-row"><span>Monday – Friday</span><span>7:30 AM – 4:00 PM</span></div>
+            <div class="office-hour-row"><span>Saturday</span><span>9:00 AM – 1:00 PM</span></div>
+            <div class="office-hour-row"><span>Sunday / Public Holidays</span><span>Closed</span></div>
+            <div class="office-hour-row"><span>Admissions Hotline</span><span>0806 822 2672</span></div>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="reveal-right">
+          <form class="contact-form" id="contact-form" novalidate aria-label="Contact form">
+            <h3 class="form-title">Send Us a Message</h3>
+            <p class="form-sub">Fill the form below and we'll respond within 24 hours.</p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="f-name">Parent / Guardian Name *</label>
+                <input class="form-control" type="text" id="f-name" name="name" placeholder="e.g. Mrs Adaeze Okafor" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="f-phone">Phone Number *</label>
+                <input class="form-control" type="tel" id="f-phone" name="phone" placeholder="08012345678" required autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="f-email">Email Address</label>
+              <input class="form-control" type="email" id="f-email" name="email" placeholder="parent@example.com" autocomplete="email" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="f-subject">Subject *</label>
+                <select class="form-control" id="f-subject" name="subject" required>
+                  <option value="" disabled selected>Select a topic…</option>
+                  <option>Admissions Enquiry</option>
+                  <option>School Fees</option>
+                  <option>Academic Programme</option>
+                  <option>Campus Visit</option>
+                  <option>Career / Employment</option>
+                  <option>General Enquiry</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="f-child-name">Child's Name (optional)</label>
+                <input class="form-control" type="text" id="f-child-name" name="child_name" placeholder="If enquiring about admission" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="f-message">Message *</label>
+              <textarea class="form-control" id="f-message" name="message" rows="4" placeholder="Tell us how we can help you…" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:16px;" aria-label="Submit contact form">
+              Send Message ✈️
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║  FOOTER                                  ║
+       ╚══════════════════════════════════════════╝ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+
+      <!-- Careers / Job Offers -->
+      <div class="footer-careers" role="region" aria-labelledby="careers-title">
+        <div class="footer-careers-header">
+          <div>
+            <div style="font-family:var(--font-display); font-size:10px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold-light); margin-bottom:6px;">Join Our Team</div>
+            <h3 class="heading-sm text-white" id="careers-title">Current Job Offers &amp; Vacancies</h3>
+          </div>
+          <a href="pages/careers.html" class="btn btn-ghost-gold" style="font-size:13px; padding:10px 22px;">View All Positions</a>
+        </div>
+
+        <div class="careers-grid">
+          <div class="career-chip" role="article" aria-label="English Language Teacher position">
+            <div class="career-chip-icon">📝</div>
+            <div>
+              <div class="career-chip-title">English Language Teacher</div>
+              <div class="career-chip-sub">Full-Time · JSS &amp; SS</div>
+            </div>
+          </div>
+          <div class="career-chip" role="article" aria-label="ICT Lab Instructor position">
+            <div class="career-chip-icon">💻</div>
+            <div>
+              <div class="career-chip-title">ICT Lab Instructor</div>
+              <div class="career-chip-sub">Full-Time · All Levels</div>
+            </div>
+          </div>
+          <div class="career-chip" role="article" aria-label="Admin Officer position">
+            <div class="career-chip-icon">🗂️</div>
+            <div>
+              <div class="career-chip-title">Admin Officer</div>
+              <div class="career-chip-sub">Full-Time · School Office</div>
+            </div>
+          </div>
+          <div class="career-chip" role="article" aria-label="NYSC Corps Member placement">
+            <div class="career-chip-icon">🎖️</div>
+            <div>
+              <div class="career-chip-title">NYSC Corps Members</div>
+              <div class="career-chip-sub">Teaching / Admin · All Depts</div>
+            </div>
+          </div>
+          <div class="career-chip" role="article" aria-label="Science Teacher position">
+            <div class="career-chip-icon">🔬</div>
+            <div>
+              <div class="career-chip-title">Science Teacher</div>
+              <div class="career-chip-sub">Full-Time · SS Sciences</div>
+            </div>
+          </div>
+          <div class="career-chip" role="article" aria-label="Volunteer Teacher position">
+            <div class="career-chip-icon">🤝</div>
+            <div>
+              <div class="career-chip-title">Volunteer Teacher</div>
+              <div class="career-chip-sub">Part-Time / Internship</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Top -->
+      <div class="footer-top">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-crest" aria-hidden="true">🎓</div>
+            <div>
+              <div class="footer-logo-name">Scootid Academy</div>
+              <div style="font-size:10px; color:var(--gold-light); letter-spacing:0.15em;">Est. 2005 · Rivers State, Nigeria</div>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Shaping exceptional young minds through academic excellence, moral integrity, and innovative learning in the heart of Rivers State.
+          </p>
+
+          <!-- Newsletter -->
+          <div style="margin-bottom:20px;">
+            <div class="footer-col-title" style="margin-bottom:10px;">Newsletter</div>
+            <div class="newsletter-form" role="form" aria-label="Newsletter signup">
+              <input class="newsletter-input" type="email" placeholder="Your email address…" aria-label="Email for newsletter" />
+              <button class="newsletter-btn" type="submit" aria-label="Subscribe to newsletter">Subscribe</button>
+            </div>
+          </div>
+
+          <!-- Socials -->
+          <div class="footer-socials" role="list" aria-label="Social media links">
+            <a href="#" class="social-btn" role="listitem" aria-label="Follow on Facebook">𝕗</a>
+            <a href="#" class="social-btn" role="listitem" aria-label="Follow on Instagram">📸</a>
+            <a href="#" class="social-btn" role="listitem" aria-label="Follow on Twitter/X">𝕏</a>
+            <a href="#" class="social-btn" role="listitem" aria-label="Watch on YouTube">▶</a>
+            <a href="https://wa.me/2348068222672" target="_blank" class="social-btn" role="listitem" aria-label="Chat on WhatsApp">💬</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links" role="list">
+            <li><a href="#about"     class="footer-link">About the School</a></li>
+            <li><a href="#academics" class="footer-link">Academics</a></li>
+            <li><a href="#news"      class="footer-link">News &amp; Events</a></li>
+            <li><a href="#gallery"   class="footer-link">Gallery</a></li>
+            <li><a href="#location"  class="footer-link">Campus Location</a></li>
+            <li><a href="#contact"   class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Admissions -->
+        <div>
+          <div class="footer-col-title">Admissions</div>
+          <ul class="footer-links" role="list">
+            <li><a href="#contact" class="footer-link">Apply Online</a></li>
+            <!-- <li><a href="#contact" class="footer-link">Visit Campus</a></li> -->
+            <li><a href="pages/academics.html" class="footer-link">School Fees</a></li>
+            <li><a href="pages/academics.html" class="footer-link">Admission Requirements</a></li>
+            <!-- <li><a href="pages/academics.html" class="footer-link">Scholarship Info</a></li> -->
+            <!-- <li><a href="#contact" class="footer-link">Admissions Hotline</a></li> -->
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <ul class="footer-links" role="list">
+            <li style="display:flex;gap:8px;align-items:flex-start;padding:4px 0;font-size:13px;color:rgba(255,255,255,0.6);">
+              📍 6 Captain Allison Close, Rumuesara, Eneka Rd, Eneka 500272
+            </li>
+            <li style="padding:4px 0;">
+              <a href="tel:+2348068222672" class="footer-link" style="padding-left:0;" aria-label="Call us">
+                📞 0806 822 2672
+              </a>
+            </li>
+            <li style="padding:4px 0;">
+              <a href="mailto:admissions@scootidacademy.edu.ng" class="footer-link" style="padding-left:0;" aria-label="Email admissions">
+                ✉️ admissions@scootidacademy.edu.ng
+              </a>
+            </li>
+            <li style="padding:4px 0;font-size:13px;color:rgba(255,255,255,0.5);">
+              🕐 Mon–Fri: 7:30 AM – 4:00 PM
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          &copy; 2026 Scootid Academy. All rights reserved. · Rivers State, Nigeria.
+        </div>
+        <div class="footer-bottom-right">
+          <!-- <a href="#" class="footer-bottom-link">Privacy Policy</a> -->
+          <!-- <a href="#" class="footer-bottom-link">Terms of Use</a> -->
+          <a href="pages/about.html" class="footer-bottom-link">About Page</a>
+          <a href="pages/academics.html" class="footer-bottom-link">Academics Page</a>
+          <a href="pages/news.html" class="footer-bottom-link">News Page</a>
+          <a href="pages/gallery.html" class="footer-bottom-link">Gallery Page</a>
+          <a href="pages/contact.html" class="footer-bottom-link">Contact Page</a>
+          <a href="pages/careers.html" class="footer-bottom-link">Careers</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

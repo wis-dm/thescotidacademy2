@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers | Scootid Academy</title>
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/nav.css" />
+  <link rel="stylesheet" href="../css/sections.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <style>
+    .page-hero {
+      background: linear-gradient(to bottom,rgba(11,29,58,.65) 0%,rgba(11,29,58,.92) 100%),
+        url('https://images.unsplash.com/photo-1562774053-701939374585?w=1400&q=80') center/cover no-repeat;
+      padding:160px 0 90px;text-align:center;position:relative;
+    }
+    .page-hero::after { content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent); }
+    .page-hero-content { position:relative;z-index:2; }
+    .breadcrumb { display:flex;align-items:center;gap:8px;justify-content:center;font-size:13px;color:rgba(255,255,255,.55);margin-bottom:16px; }
+    .breadcrumb a { color:var(--gold-light); }
+
+    .jobs-grid { display:grid;grid-template-columns:repeat(2,1fr);gap:24px; }
+    .job-card { background:var(--white);border-radius:var(--r-lg);border:1px solid var(--gray-200);padding:32px;transition:var(--transition);position:relative;overflow:hidden; }
+    .job-card::before { content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(to bottom,var(--gold),var(--gold-light));transform:scaleY(0);transform-origin:top;transition:var(--transition); }
+    .job-card:hover { border-color:var(--gold);box-shadow:var(--shadow-md);transform:translateY(-4px); }
+    .job-card:hover::before { transform:scaleY(1); }
+    .job-header { display:flex;align-items:flex-start;gap:16px;margin-bottom:16px; }
+    .job-icon { width:52px;height:52px;border-radius:var(--r-md);background:linear-gradient(135deg,var(--gold),var(--gold-light));display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;box-shadow:var(--shadow-gold); }
+    .job-title { font-family:var(--font-heading);font-size:20px;font-weight:700;color:var(--navy);margin-bottom:4px; }
+    .job-dept { font-size:12px;color:var(--gray-400);text-transform:uppercase;letter-spacing:.1em;font-weight:600; }
+    .job-tags { display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px; }
+    .job-tag { padding:4px 12px;border-radius:var(--r-full);font-size:11px;font-weight:600; }
+    .tag-type { background:var(--navy);color:var(--white); }
+    .tag-level { background:var(--gold-pale);color:var(--navy);border:1px solid var(--gold); }
+    .tag-open { background:#e8f8ec;color:var(--success);border:1px solid var(--success); }
+    .job-desc { font-size:14px;color:var(--gray-600);line-height:1.65;margin-bottom:20px; }
+    .req-title { font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-800);margin-bottom:8px; }
+    .req-item { font-size:13px;color:var(--gray-600);padding:4px 0;display:flex;align-items:center;gap:8px; }
+    .req-item::before { content:'✓';color:var(--gold);font-weight:700; }
+
+    .apply-section { background:var(--navy);border-radius:var(--r-xl);padding:60px 52px;margin-top:60px; }
+    @media(max-width:768px) { .jobs-grid { grid-template-columns:1fr; } .apply-section { padding:36px 24px; } }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar" role="navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+          <div class="nav-logo-crest">🎓</div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">Scootid Academy</span>
+            <span class="nav-logo-tagline">Est. 2005 · Rivers State</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="about.html"     class="nav-link">About</a></li>
+          <li><a href="academics.html" class="nav-link">Academics</a></li>
+          <li><a href="news.html"      class="nav-link">News &amp; Events</a></li>
+          <li><a href="gallery.html"   class="nav-link">Gallery</a></li>
+          <li><a href="contact.html"   class="nav-link">Contact</a></li>
+          <li><a href="careers.html"   class="nav-link active">Careers</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-primary">Apply Now</a>
+          <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-close">✕</button>
+    <a href="about.html"     class="mobile-nav-link">About</a>
+    <a href="academics.html" class="mobile-nav-link">Academics</a>
+    <a href="news.html"      class="mobile-nav-link">News &amp; Events</a>
+    <a href="gallery.html"   class="mobile-nav-link">Gallery</a>
+    <a href="contact.html"   class="mobile-nav-link">Contact</a>
+    <a href="careers.html"   class="mobile-nav-link">Careers</a>
+    <div class="mobile-menu-bottom"><a href="contact.html" class="btn btn-primary">Apply Now</a></div>
+  </div>
+
+  <div class="page-hero">
+    <div class="container page-hero-content">
+      <nav class="breadcrumb"><a href="../index.html">Home</a><span>›</span><span>Careers</span></nav>
+      <div class="section-tag light">Join Our Team</div>
+      <h1 class="heading-xl text-white" style="margin-bottom:16px;">Job Offers &amp; Vacancies</h1>
+      <div class="gold-divider center"></div>
+      <p class="body-lg" style="color:rgba(255,255,255,.72);max-width:560px;margin:0 auto;">Join a passionate team of educators shaping the next generation of Nigerian leaders at Scootid Academy.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:48px;" class="reveal">
+        <div class="section-tag">Open Positions</div>
+        <h2 class="heading-lg text-navy">Current Opportunities</h2>
+        <div class="gold-divider center"></div>
+      </div>
+
+      <div class="jobs-grid">
+        <div class="job-card reveal">
+          <div class="job-header"><div class="job-icon">📝</div><div><div class="job-title">English Language Teacher</div><div class="job-dept">Teaching · Secondary</div></div></div>
+          <div class="job-tags"><span class="job-tag tag-type">Full-Time</span><span class="job-tag tag-level">JSS &amp; SSS</span><span class="job-tag tag-open">● Now Hiring</span></div>
+          <p class="job-desc">Passionate English teacher needed for JSS and SSS classes. Must inspire a love for language, literature, and communication in all students.</p>
+          <div class="req-title">Requirements</div>
+          <div class="req-item">B.Ed / B.A in English Language or Education</div>
+          <div class="req-item">Minimum 2 years classroom experience</div>
+          <div class="req-item">TRCN registered preferred</div>
+          <div style="margin-top:20px;"><a href="#apply-form" class="btn btn-primary">Apply for This Role</a></div>
+        </div>
+
+        <div class="job-card reveal delay-1">
+          <div class="job-header"><div class="job-icon">💻</div><div><div class="job-title">ICT Lab Instructor</div><div class="job-dept">Technology · All Levels</div></div></div>
+          <div class="job-tags"><span class="job-tag tag-type">Full-Time</span><span class="job-tag tag-level">Primary &amp; Secondary</span><span class="job-tag tag-open">● Now Hiring</span></div>
+          <p class="job-desc">Skilled ICT instructor to manage computer lab and teach digital literacy, MS Office, basic coding, and internet safety.</p>
+          <div class="req-title">Requirements</div>
+          <div class="req-item">HND / B.Sc in Computer Science or ICT</div>
+          <div class="req-item">Knowledge of coding (Python / Scratch preferred)</div>
+          <div class="req-item">Excellent communication skills</div>
+          <div style="margin-top:20px;"><a href="#apply-form" class="btn btn-primary">Apply for This Role</a></div>
+        </div>
+
+        <div class="job-card reveal delay-2">
+          <div class="job-header"><div class="job-icon">🔬</div><div><div class="job-title">Science Teacher</div><div class="job-dept">Sciences · Senior Secondary</div></div></div>
+          <div class="job-tags"><span class="job-tag tag-type">Full-Time</span><span class="job-tag tag-level">SS1–SS3</span><span class="job-tag tag-open">● Now Hiring</span></div>
+          <p class="job-desc">Qualified Science teacher (Biology or Chemistry) to prepare SS students for WAEC/NECO and JAMB. Lab session experience required.</p>
+          <div class="req-title">Requirements</div>
+          <div class="req-item">B.Sc / B.Ed in Biology or Chemistry</div>
+          <div class="req-item">WAEC exam coaching experience</div>
+          <div class="req-item">Lab management skills</div>
+          <div style="margin-top:20px;"><a href="#apply-form" class="btn btn-primary">Apply for This Role</a></div>
+        </div>
+
+        <div class="job-card reveal delay-3">
+          <div class="job-header"><div class="job-icon">🗂️</div><div><div class="job-title">Admin Officer</div><div class="job-dept">Administration · School Office</div></div></div>
+          <div class="job-tags"><span class="job-tag tag-type">Full-Time</span><span class="job-tag tag-level">Office Based</span><span class="job-tag tag-open">● Now Hiring</span></div>
+          <p class="job-desc">Organised Admin Officer to handle student records, correspondence, admissions coordination, and general office management.</p>
+          <div class="req-title">Requirements</div>
+          <div class="req-item">OND / HND / B.Sc in Business Admin</div>
+          <div class="req-item">Proficiency in MS Word and Excel</div>
+          <div class="req-item">Strong organisational skills</div>
+          <div style="margin-top:20px;"><a href="#apply-form" class="btn btn-primary">Apply for This Role</a></div>
+        </div>
+
+        <div class="job-card reveal">
+          <div class="job-header"><div class="job-icon">🎖️</div><div><div class="job-title">NYSC Corps Members</div><div class="job-dept">Primary Assignment · All Depts</div></div></div>
+          <div class="job-tags"><span class="job-tag tag-type">Service Year</span><span class="job-tag tag-level">All Subjects</span><span class="job-tag tag-open">● Accepting</span></div>
+          <p class="job-desc">We welcome NYSC corps members seeking primary placement at Scootid Academy. We provide a structured, supportive service year experience.</p>
+          <div class="req-title">Requirements</div>
+          <div class="req-item">Valid NYSC call-up letter</div>
+          <div class="req-item">Teaching or admin background preferred</div>
+          <div class="req-item">Enthusiasm and commitment</div>
+          <div style="margin-top:20px;"><a href="#apply-form" class="btn btn-primary">Register Interest</a></div>
+        </div>
+
+        <div class="job-card reveal delay-1">
+          <div class="job-header"><div class="job-icon">🤝</div><div><div class="job-title">Volunteer Teacher / Intern</div><div class="job-dept">Volunteer · Part-Time</div></div></div>
+          <div class="job-tags"><span class="job-tag tag-type">Volunteer</span><span class="job-tag tag-level">Flexible</span><span class="job-tag tag-open">● Always Open</span></div>
+          <p class="job-desc">Volunteers and interns who want to mentor students, support teachers, or assist in administration. Any subject area welcome.</p>
+          <div class="req-title">Requirements</div>
+          <div class="req-item">Genuine passion for education</div>
+          <div class="req-item">Minimum one term commitment (3 months)</div>
+          <div class="req-item">Any educational background</div>
+          <div style="margin-top:20px;"><a href="#apply-form" class="btn btn-primary">Register Interest</a></div>
+        </div>
+      </div>
+
+      <!-- Application Form -->
+      <div class="apply-section" id="apply-form">
+        <div style="text-align:center;margin-bottom:40px;">
+          <div class="section-tag light">Application</div>
+          <h2 class="heading-md text-white">Submit Your Application</h2>
+          <div class="gold-divider center"></div>
+          <p style="color:rgba(255,255,255,.65);font-size:15px;max-width:480px;margin:0 auto;">Fill the form below and attach your CV. Our HR team will contact you within 3 working days.</p>
+        </div>
+        <form id="career-form" novalidate style="max-width:680px;margin:0 auto;">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="c-name" style="color:rgba(255,255,255,.7);">Full Name *</label>
+              <input class="form-control" type="text" id="c-name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="c-phone" style="color:rgba(255,255,255,.7);">Phone Number *</label>
+              <input class="form-control" type="tel" id="c-phone" placeholder="08012345678" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="c-email" style="color:rgba(255,255,255,.7);">Email Address *</label>
+            <input class="form-control" type="email" id="c-email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="c-pos" style="color:rgba(255,255,255,.7);">Position Applying For *</label>
+            <select class="form-control" id="c-pos" required>
+              <option value="" disabled selected>Select position…</option>
+              <option>English Language Teacher</option>
+              <option>ICT Lab Instructor</option>
+              <option>Science Teacher</option>
+              <option>Admin Officer</option>
+              <option>NYSC Corps Member</option>
+              <option>Volunteer / Intern</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="c-cv" style="color:rgba(255,255,255,.7);">Upload CV / Resume *</label>
+            <input class="form-control" type="file" id="c-cv" accept=".pdf,.doc,.docx" required style="cursor:pointer;" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="c-cover" style="color:rgba(255,255,255,.7);">Cover Letter *</label>
+            <textarea class="form-control" id="c-cover" rows="4" placeholder="Tell us about yourself and why you want to join Scootid Academy…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;">Submit Application 📨</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:var(--navy);padding:28px 0;border-top:1px solid rgba(255,255,255,.08);">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <div style="font-size:12px;color:rgba(255,255,255,.4);">&copy; 2025 Scootid Academy. All rights reserved.</div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;">
+        <a href="../index.html"  class="footer-bottom-link">Home</a>
+        <a href="about.html"    class="footer-bottom-link">About</a>
+        <a href="academics.html" class="footer-bottom-link">Academics</a>
+        <a href="news.html"     class="footer-bottom-link">News</a>
+        <a href="gallery.html"  class="footer-bottom-link">Gallery</a>
+        <a href="contact.html"  class="footer-bottom-link">Contact</a>
+        <a href="careers.html"  style="color:var(--gold-light);font-size:13px;">Careers</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+  <script>
+    document.getElementById('career-form').addEventListener('submit',function(e){
+      e.preventDefault();const btn=this.querySelector('[type="submit"]');
+      btn.textContent='Submitting…';btn.disabled=true;
+      setTimeout(()=>{btn.textContent='✓ Application Received!';btn.style.background='var(--success)';btn.style.color='#fff';this.reset();},2000);
+    });
+  </script>
+</body>
+</html>

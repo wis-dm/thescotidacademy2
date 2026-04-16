@@ -1,0 +1,61 @@
+/* =============================================
+   ENEKA ROYAL ACADEMY — DESIGN TOKENS
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Cinzel:wght@400;600;700&display=swap');
+
+:root {
+  /* — Colors — */
+  --navy:        #0b1d3a;
+  --navy-mid:    #142448;
+  --navy-light:  #1c3260;
+  --navy-glow:   rgba(11,29,58,0.72);
+  --gold:        #c8a84b;
+  --gold-light:  #e3c96e;
+  --gold-pale:   #f6eacc;
+  --gold-glow:   rgba(200,168,75,0.20);
+  --cream:       #faf8f3;
+  --white:       #ffffff;
+  --off-white:   #f4f2ed;
+  --gray-100:    #f0eff4;
+  --gray-200:    #e2e1ea;
+  --gray-400:    #9d9db0;
+  --gray-600:    #5e5e78;
+  --gray-800:    #28283a;
+  --success:     #2d7a56;
+  --danger:      #c0392b;
+
+  /* — Fonts — */
+  --font-display: 'Cinzel', serif;
+  --font-heading: 'Playfair Display', serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* — Spacing — */
+  --space-xs:  8px;
+  --space-sm:  16px;
+  --space-md:  32px;
+  --space-lg:  64px;
+  --space-xl:  96px;
+  --space-2xl: 128px;
+
+  /* — Border Radius — */
+  --r-sm:  6px;
+  --r-md:  14px;
+  --r-lg:  24px;
+  --r-xl:  40px;
+  --r-full: 9999px;
+
+  /* — Shadows — */
+  --shadow-sm:   0 2px 12px rgba(11,29,58,0.08);
+  --shadow-md:   0 8px 32px rgba(11,29,58,0.13);
+  --shadow-lg:   0 20px 60px rgba(11,29,58,0.20);
+  --shadow-xl:   0 32px 80px rgba(11,29,58,0.28);
+  --shadow-gold: 0 8px 32px rgba(200,168,75,0.28);
+
+  /* — Transitions — */
+  --ease:      cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out:  cubic-bezier(0, 0, 0.2, 1);
+  --ease-in:   cubic-bezier(0.4, 0, 1, 1);
+  --transition: all 0.36s var(--ease);
+  --transition-fast: all 0.18s var(--ease);
+}

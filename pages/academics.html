@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academics | Scootid Academy</title>
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/nav.css" />
+  <link rel="stylesheet" href="../css/sections.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <style>
+    .page-hero {
+      background: linear-gradient(to bottom,rgba(11,29,58,.65) 0%,rgba(11,29,58,.92) 100%),
+        url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1400&q=80') center/cover no-repeat;
+      padding:160px 0 90px; text-align:center; position:relative;
+    }
+    .page-hero::after { content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent); }
+    .page-hero-content { position:relative;z-index:2; }
+    .breadcrumb { display:flex;align-items:center;gap:8px;justify-content:center;font-size:13px;color:rgba(255,255,255,.55);margin-bottom:16px; }
+    .breadcrumb a { color:var(--gold-light); }
+
+    .prog-overview-grid { display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-bottom:60px; }
+    .prog-mini-card { text-align:center;padding:20px 12px;background:var(--white);border-radius:var(--r-md);border:1px solid var(--gray-200);cursor:pointer;transition:var(--transition);text-decoration:none;display:block; }
+    .prog-mini-card:hover { border-color:var(--gold);box-shadow:var(--shadow-md);transform:translateY(-4px); }
+    .prog-mini-icon { font-size:28px;margin-bottom:8px; }
+    .prog-mini-name { font-size:12px;font-weight:600;color:var(--navy); }
+
+    .programme-detail { display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:64px 0;border-bottom:1px solid var(--gray-200); }
+    .programme-detail:last-child { border-bottom:none; }
+    .programme-detail.reverse>:first-child { order:2; }
+    .programme-detail.reverse>:last-child { order:1; }
+
+    .prog-img-wrap { position:relative;border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--shadow-lg); }
+    .prog-img-wrap img { width:100%;height:380px;object-fit:cover;display:block;transition:transform .5s var(--ease); }
+    .prog-img-wrap:hover img { transform:scale(1.04); }
+    .prog-age-badge { position:absolute;top:20px;left:20px;background:var(--gold);color:var(--navy);font-family:var(--font-display);font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;padding:6px 14px;border-radius:var(--r-full); }
+
+    .curriculum-list { margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:8px; }
+    .curriculum-item { display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--cream);border-radius:var(--r-sm);font-size:13px;font-weight:500;color:var(--gray-800);border:1px solid var(--gray-200);transition:var(--transition-fast); }
+    .curriculum-item:hover { border-color:var(--gold);background:var(--gold-pale); }
+    .curriculum-item::before { content:'✓';color:var(--gold);font-weight:700;flex-shrink:0; }
+
+    @media(max-width:1024px) { .prog-overview-grid { grid-template-columns:repeat(3,1fr); } }
+    @media(max-width:768px) {
+      .programme-detail { grid-template-columns:1fr;gap:32px; }
+      .programme-detail.reverse>:first-child { order:1; }
+      .programme-detail.reverse>:last-child { order:2; }
+      .curriculum-list { grid-template-columns:1fr; }
+    }
+    @media(max-width:480px) { .prog-overview-grid { grid-template-columns:repeat(2,1fr); } }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar" role="navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+          <div class="nav-logo-crest">🎓</div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">Scootid Academy</span>
+            <span class="nav-logo-tagline">Est. 2005 · Rivers State</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="about.html"     class="nav-link">About</a></li>
+          <li><a href="academics.html" class="nav-link active">Academics</a></li>
+          <li><a href="news.html"      class="nav-link">News &amp; Events</a></li>
+          <li><a href="gallery.html"   class="nav-link">Gallery</a></li>
+          <li><a href="contact.html"   class="nav-link">Contact</a></li>
+          <li><a href="careers.html"   class="nav-link">Careers</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-primary">Apply Now</a>
+          <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-close">✕</button>
+    <a href="about.html"     class="mobile-nav-link">About</a>
+    <a href="academics.html" class="mobile-nav-link">Academics</a>
+    <a href="news.html"      class="mobile-nav-link">News &amp; Events</a>
+    <a href="gallery.html"   class="mobile-nav-link">Gallery</a>
+    <a href="contact.html"   class="mobile-nav-link">Contact</a>
+    <a href="careers.html"   class="mobile-nav-link">Careers</a>
+    <div class="mobile-menu-bottom"><a href="contact.html" class="btn btn-primary">Apply Now</a></div>
+  </div>
+
+  <div class="page-hero">
+    <div class="container page-hero-content">
+      <nav class="breadcrumb"><a href="../index.html">Home</a><span>›</span><span>Academics</span></nav>
+      <div class="section-tag light">Programmes</div>
+      <h1 class="heading-xl text-white" style="margin-bottom:16px;">Academic Programmes</h1>
+      <div class="gold-divider center"></div>
+      <p class="body-lg" style="color:rgba(255,255,255,.72);max-width:560px;margin:0 auto;">World-class education from crèche through secondary school — specialist programmes in ICT, leadership, and exam coaching.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="prog-overview-grid reveal">
+        <a href="#nursery"    class="prog-mini-card"><div class="prog-mini-icon">🌱</div><div class="prog-mini-name">Nursery &amp; Crèche</div></a>
+        <a href="#primary"    class="prog-mini-card"><div class="prog-mini-icon">📚</div><div class="prog-mini-name">Primary School</div></a>
+        <a href="#secondary"  class="prog-mini-card"><div class="prog-mini-icon">🎓</div><div class="prog-mini-name">Secondary School</div></a>
+        <!-- <a href="#ict"        class="prog-mini-card"><div class="prog-mini-icon">💻</div><div class="prog-mini-name">ICT &amp; Digital</div></a> -->
+        <!-- <a href="#coaching"   class="prog-mini-card"><div class="prog-mini-icon">🧑‍🏫</div><div class="prog-mini-name">Special Coaching</div></a> -->
+        <!-- <a href="#leadership" class="prog-mini-card"><div class="prog-mini-icon">🌟</div><div class="prog-mini-name">Leadership</div></a> -->
+      </div>
+
+      <div class="programme-detail reveal" id="nursery">
+        <div class="prog-img-wrap">
+          <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=700&q=80" alt="Nursery" loading="lazy"/>
+          <div class="prog-age-badge">Ages 1–5</div>
+        </div>
+        <div>
+          <div class="section-tag">Foundation Stage</div>
+          <h2 class="heading-md text-navy">Nursery &amp; Crèche</h2>
+          <div class="gold-divider"></div>
+          <p class="body-md text-muted" style="margin-bottom:20px;">A warm, safe, and stimulating environment where our youngest learners discover the joy of learning through play, exploration, and structured activities.</p>
+          <div class="curriculum-list">
+            <div class="curriculum-item">Early Literacy &amp; Phonics</div>
+            <div class="curriculum-item">Number Recognition</div>
+            <div class="curriculum-item">Social &amp; Emotional Skills</div>
+            <div class="curriculum-item">Arts, Crafts &amp; Play</div>
+            <div class="curriculum-item">Basic Science Discovery</div>
+            <div class="curriculum-item">Music &amp; Movement</div>
+          </div>
+          <div style="margin-top:28px;"><a href="contact.html" class="btn btn-primary">Enrol Your Child</a></div>
+        </div>
+      </div>
+
+      <div class="programme-detail reverse reveal" id="primary">
+        <div class="prog-img-wrap">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=700&q=80" alt="Primary" loading="lazy"/>
+          <div class="prog-age-badge">Ages 6–12</div>
+        </div>
+        <div>
+          <div class="section-tag">Primary Stage</div>
+          <h2 class="heading-md text-navy">Primary School (Pry 1–6)</h2>
+          <div class="gold-divider"></div>
+          <p class="body-md text-muted" style="margin-bottom:20px;">Strong foundations in literacy, numeracy, and critical thinking. Nigerian national curriculum enriched with British education influences and modern learning methods.</p>
+          <div class="curriculum-list">
+            <div class="curriculum-item">English Language</div>
+            <div class="curriculum-item">Mathematics</div>
+            <div class="curriculum-item">Basic Science &amp; Tech</div>
+            <div class="curriculum-item">Social Studies</div>
+            <div class="curriculum-item">Computer Studies</div>
+            <div class="curriculum-item">Physical Education</div>
+            <div class="curriculum-item">Civic Education</div>
+            <div class="curriculum-item">Cultural &amp; Creative Arts</div>
+          </div>
+          <div style="margin-top:28px;"><a href="contact.html" class="btn btn-primary">Enrol Your Child</a></div>
+        </div>
+      </div>
+
+      <div class="programme-detail reveal" id="secondary">
+        <div class="prog-img-wrap">
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=700&q=80" alt="Secondary" loading="lazy"/>
+          <div class="prog-age-badge">Ages 12–18</div>
+        </div>
+        <div>
+          <div class="section-tag">Secondary Stage</div>
+          <h2 class="heading-md text-navy">Secondary School (JSS &amp; SSS)</h2>
+          <div class="gold-divider"></div>
+          <p class="body-md text-muted" style="margin-bottom:20px;">Comprehensive WAEC, NECO, and JAMB preparation with consistently outstanding results. Science, Arts, and Commercial tracks at senior secondary level.</p>
+          <div class="curriculum-list">
+            <div class="curriculum-item">English &amp; Literature</div>
+            <div class="curriculum-item">Mathematics</div>
+            <div class="curriculum-item">Biology / Chemistry / Physics</div>
+            <div class="curriculum-item">Government &amp; CRK</div>
+            <div class="curriculum-item">Accounting &amp; Economics</div>
+            <div class="curriculum-item">Further Mathematics</div>
+            <div class="curriculum-item">WAEC/NECO Prep</div>
+            <div class="curriculum-item">JAMB CBT Practice</div>
+          </div>
+          <div style="margin-top:28px;"><a href="contact.html" class="btn btn-primary">Enrol Your Child</a></div>
+        </div>
+      </div>
+
+      <!-- <div class="programme-detail reverse reveal" id="ict"> -->
+        <!-- <div class="prog-img-wrap"> -->
+          <!-- <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=700&q=80" alt="ICT Lab" loading="lazy"/> -->
+          <!-- <div class="prog-age-badge">All Levels</div> -->
+        <!-- </div> -->
+        <!-- <div> -->
+          <!-- <div class="section-tag">Digital Learning</div> -->
+          <!-- <h2 class="heading-md text-navy">ICT &amp; Digital Learning</h2> -->
+          <!-- <div class="gold-divider"></div> -->
+          <!-- <p class="body-md text-muted" style="margin-bottom:20px;">Fully-equipped computer lab with broadband internet, coding classes, digital literacy, and robotics club. Preparing students for the tech-driven 21st century.</p> -->
+          <!-- <div class="curriculum-list"> -->
+            <!-- <div class="curriculum-item">Computer Appreciation</div> -->
+            <!-- <div class="curriculum-item">Microsoft Office Suite</div> -->
+            <!-- <div class="curriculum-item">Coding — Python / Scratch</div> -->
+            <!-- <div class="curriculum-item">Internet Safety</div> -->
+            <!-- <div class="curriculum-item">Digital Literacy</div> -->
+            <!-- <div class="curriculum-item">Robotics Club</div> -->
+          <!-- </div> -->
+          <!-- <div style="margin-top:28px;"><a href="contact.html" class="btn btn-primary">Learn More</a></div> -->
+        <!-- </div> -->
+      <!-- </div> -->
+
+      <!--<div class="programme-detail reveal" id="coaching">
+        <div class="prog-img-wrap">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=700&q=80" alt="Coaching" loading="lazy"/>
+          <div class="prog-age-badge">SS1–SS3</div>
+        </div>
+        <div>
+          <div class="section-tag">Exam Preparation</div>
+          <h2 class="heading-md text-navy">Special Coaching &amp; Tutorials</h2>
+          <div class="gold-divider"></div>
+          <p class="body-md text-muted" style="margin-bottom:20px;">Dedicated exam coaching for WAEC, NECO, JAMB, and Common Entrance in small groups led by our top faculty. Morning and evening sessions available.</p>
+          <div class="curriculum-list">
+            <div class="curriculum-item">WAEC Past Questions</div>
+            <div class="curriculum-item">NECO Prep</div>
+            <div class="curriculum-item">JAMB CBT Practice</div>
+            <div class="curriculum-item">Common Entrance</div>
+            <div class="curriculum-item">Small Group Sessions</div>
+            <div class="curriculum-item">Individual Mentoring</div>
+          </div>
+          <div style="margin-top:28px;"><a href="contact.html" class="btn btn-primary">Register for Coaching</a></div>
+        </div>
+      </div>
+
+      <div class="programme-detail reverse reveal" id="leadership">
+        <div class="prog-img-wrap">
+          <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=700&q=80" alt="Leadership" loading="lazy"/>
+          <div class="prog-age-badge">All Levels</div>
+        </div>
+        <div>
+          <div class="section-tag">Character Education</div>
+          <h2 class="heading-md text-navy">Moral &amp; Leadership Training</h2>
+          <div class="gold-divider"></div>
+          <p class="body-md text-muted" style="margin-bottom:20px;">Character formation, civic responsibility, public speaking, and community service. Our graduates don't just pass exams — they lead communities.</p>
+          <div class="curriculum-list">
+            <div class="curriculum-item">Civic Education</div>
+            <div class="curriculum-item">Debate &amp; Public Speaking</div>
+            <div class="curriculum-item">School Prefect Programme</div>
+            <div class="curriculum-item">Community Service</div>
+            <div class="curriculum-item">Moral Instruction</div>
+            <div class="curriculum-item">Inter-School Leadership</div>
+          </div> -->
+          <!-- <div style="margin-top:28px;"><a href="contact.html" class="btn btn-primary">Enrol Your Child</a></div> -->
+        <!-- </div> -->
+      <!-- </div> -->
+
+    </div>
+  </section>
+
+  <section style="background:var(--navy);padding:72px 0;">
+    <div class="container" style="text-align:center;">
+      <div class="section-tag light">Admissions Open</div>
+      <h2 class="heading-lg text-white" style="margin-bottom:16px;">Secure Your Child's Place Today</h2>
+      <div class="gold-divider center"></div>
+      <p style="color:rgba(255,255,255,.65);max-width:480px;margin:0 auto 32px;font-size:16px;">2025/2026 admissions are now open. Contact our admissions team to begin.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-primary">Apply for Admission</a>
+        <a href="contact.html" class="btn btn-outline-white">Book Campus Visit</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:var(--navy);padding:28px 0;border-top:1px solid rgba(255,255,255,.08);">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <div style="font-size:12px;color:rgba(255,255,255,.4);">&copy; 2025 Scootid Academy. All rights reserved.</div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;">
+        <a href="../index.html"  class="footer-bottom-link">Home</a>
+        <a href="about.html"    class="footer-bottom-link">About</a>
+        <a href="academics.html" style="color:var(--gold-light);font-size:13px;">Academics</a>
+        <a href="news.html"     class="footer-bottom-link">News</a>
+        <a href="gallery.html"  class="footer-bottom-link">Gallery</a>
+        <a href="contact.html"  class="footer-bottom-link">Contact</a>
+        <a href="careers.html"  class="footer-bottom-link">Careers</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
